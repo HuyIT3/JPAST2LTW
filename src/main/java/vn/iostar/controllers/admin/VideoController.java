@@ -104,13 +104,13 @@ public class VideoController extends HttpServlet {
                     fname = System.currentTimeMillis() + "." + ext;
                     // upload file
                     part.write(uploadPath + "/" + fname);
-                    // ghi ten file vao data
+                   
                     video.setPoster(fname);
                 } else {
                     video.setPoster(fileold);
                 }
             } catch (Exception e) {
-                // TODO: handle exception
+                
                 e.printStackTrace();
             }
 				vidService.update(video);
